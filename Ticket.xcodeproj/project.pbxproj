@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		720A72BD1F57E29500556F64 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 720A72BC1F57E29500556F64 /* main.cpp */; };
+		720A72DC1F58163500556F64 /* Station.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 720A72DA1F58163500556F64 /* Station.cpp */; };
+		720A72DF1F5816AC00556F64 /* Train.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 720A72DD1F5816AC00556F64 /* Train.cpp */; };
+		720A72E21F5816F800556F64 /* Line.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 720A72E01F5816F800556F64 /* Line.cpp */; };
+		720A72E51F58175300556F64 /* Buyer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 720A72E31F58175300556F64 /* Buyer.cpp */; };
+		720A72E81F58196D00556F64 /* Ticket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 720A72E61F58196D00556F64 /* Ticket.cpp */; };
+		720A72EB1F5819C200556F64 /* RemainedTicketsInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 720A72E91F5819C200556F64 /* RemainedTicketsInfo.cpp */; };
+		720A72EE1F5819FB00556F64 /* SalesSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 720A72EC1F5819FB00556F64 /* SalesSystem.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +32,20 @@
 /* Begin PBXFileReference section */
 		720A72B91F57E29500556F64 /* Ticket */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Ticket; sourceTree = BUILT_PRODUCTS_DIR; };
 		720A72BC1F57E29500556F64 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		720A72DA1F58163500556F64 /* Station.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Station.cpp; sourceTree = "<group>"; };
+		720A72DB1F58163500556F64 /* Station.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Station.hpp; sourceTree = "<group>"; };
+		720A72DD1F5816AC00556F64 /* Train.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Train.cpp; sourceTree = "<group>"; };
+		720A72DE1F5816AC00556F64 /* Train.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Train.hpp; sourceTree = "<group>"; };
+		720A72E01F5816F800556F64 /* Line.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Line.cpp; sourceTree = "<group>"; };
+		720A72E11F5816F800556F64 /* Line.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Line.hpp; sourceTree = "<group>"; };
+		720A72E31F58175300556F64 /* Buyer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Buyer.cpp; sourceTree = "<group>"; };
+		720A72E41F58175300556F64 /* Buyer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Buyer.hpp; sourceTree = "<group>"; };
+		720A72E61F58196D00556F64 /* Ticket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ticket.cpp; sourceTree = "<group>"; };
+		720A72E71F58196D00556F64 /* Ticket.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Ticket.hpp; sourceTree = "<group>"; };
+		720A72E91F5819C200556F64 /* RemainedTicketsInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RemainedTicketsInfo.cpp; sourceTree = "<group>"; };
+		720A72EA1F5819C200556F64 /* RemainedTicketsInfo.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RemainedTicketsInfo.hpp; sourceTree = "<group>"; };
+		720A72EC1F5819FB00556F64 /* SalesSystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SalesSystem.cpp; sourceTree = "<group>"; };
+		720A72ED1F5819FB00556F64 /* SalesSystem.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SalesSystem.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +79,20 @@
 			isa = PBXGroup;
 			children = (
 				720A72BC1F57E29500556F64 /* main.cpp */,
+				720A72DA1F58163500556F64 /* Station.cpp */,
+				720A72DB1F58163500556F64 /* Station.hpp */,
+				720A72DD1F5816AC00556F64 /* Train.cpp */,
+				720A72DE1F5816AC00556F64 /* Train.hpp */,
+				720A72E01F5816F800556F64 /* Line.cpp */,
+				720A72E11F5816F800556F64 /* Line.hpp */,
+				720A72E31F58175300556F64 /* Buyer.cpp */,
+				720A72E41F58175300556F64 /* Buyer.hpp */,
+				720A72E61F58196D00556F64 /* Ticket.cpp */,
+				720A72E71F58196D00556F64 /* Ticket.hpp */,
+				720A72E91F5819C200556F64 /* RemainedTicketsInfo.cpp */,
+				720A72EA1F5819C200556F64 /* RemainedTicketsInfo.hpp */,
+				720A72EC1F5819FB00556F64 /* SalesSystem.cpp */,
+				720A72ED1F5819FB00556F64 /* SalesSystem.hpp */,
 			);
 			path = Ticket;
 			sourceTree = "<group>";
@@ -119,6 +154,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				720A72E51F58175300556F64 /* Buyer.cpp in Sources */,
+				720A72EB1F5819C200556F64 /* RemainedTicketsInfo.cpp in Sources */,
+				720A72E81F58196D00556F64 /* Ticket.cpp in Sources */,
+				720A72DF1F5816AC00556F64 /* Train.cpp in Sources */,
+				720A72E21F5816F800556F64 /* Line.cpp in Sources */,
+				720A72EE1F5819FB00556F64 /* SalesSystem.cpp in Sources */,
+				720A72DC1F58163500556F64 /* Station.cpp in Sources */,
 				720A72BD1F57E29500556F64 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,6 +290,7 @@
 				720A72C21F57E29500556F64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
