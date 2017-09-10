@@ -23,9 +23,9 @@ class SalesSystem {
 private:
     Train* setupTrain();
     Station* setupStation();
+    vector<Ticket*> ticketHistory;    //购票历史
 public:
     Line* line;
-    vector<Ticket*> tickets;
     
     /**
      查询余票功能
@@ -59,9 +59,9 @@ public:
      退票，传入购票者信息，将购票者名下所有票都退票
      
      @param buyer 购票者信息，允许只传入名字或者只传入ID
-     @return 退票是否成功
+     @return 所有退的票
      */
-    bool refoundTickets(Buyer* buyer);
+    vector<Ticket*> refoundTickets(Buyer* buyer);
     
     /**
      查找对应index的station
@@ -72,5 +72,30 @@ public:
     Station* stationWithIndex(int index);
     
     SalesSystem ();
+    ~SalesSystem();
+private:
+    /**
+     传入的车站是否在起终点范围内
+     
+     @parm searchStation 要搜索的车站
+     @param startStation 起点车站
+     @param endStation 终点车站
+     @return 是否在起终点车站范围内
+     */
+    bool startStationWithIn(Station*searchStation, Station* startStation,Station* endStation);
+    
+    /**
+     从文件中读取购票历史
+
+     @return 购票历史
+     */
+    vector<Ticket*> loadTicketFromFile();
+    
+    /**
+     向文件保存购票历史
+
+     @return 是否保存成功
+     */
+    bool saveTicketToFile();
 };
 #endif /* SalesSystem_hpp */

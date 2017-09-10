@@ -20,6 +20,9 @@ public:
     string name;  //购买者名字
     int id;       //购买者身份证号
     Buyer(string name,int id);
+    //返回当前buyer和入参的buyer是否同一个人
+    //也可以重载 == 运算符实现
+    bool sameBuyer(Buyer* buyer);
 };
 
 #endif /* Buyer_hpp */
