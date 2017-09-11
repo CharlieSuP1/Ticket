@@ -92,16 +92,42 @@ void showBuyTicket() {
     }
     if (ticket) {
         cout << "Puchase succeeded !!!";
+    }else {
+        cout << "Puchase failed !!!";
     }
     pressEnterToMainPage();
 }
 
 void showSearchPurchaseHistory() {
+    cout << "Welcome to ticket search history system!\n";
     
+    cout << "Please input your name\n";
+    string name;
+    cin >> name;
+    
+    cout << "Please input your id\n";
+    int id;
+    cin >> id;
+    
+    vector<Ticket*> tickets = salesSystem->searchTickesInfo(new Buyer(name,id));
+    cout << "You have purchased " + to_string(tickets.size()) + "tickets\n";
+    pressEnterToMainPage();
 }
 
 void showRefoundTicket() {
+    cout << "Welcome to ticket refound system!\n";
     
+    cout << "Please input your name\n";
+    string name;
+    cin >> name;
+    
+    cout << "Please input your id\n";
+    int id;
+    cin >> id;
+    
+    vector<Ticket*> tickets = salesSystem->refoundTickets(new Buyer(name,id));
+    cout << "You have refounded " + to_string(tickets.size()) + "tickets\n";
+    pressEnterToMainPage();
 }
 
 void showHomeWelcome(){

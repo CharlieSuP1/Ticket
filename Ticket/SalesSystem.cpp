@@ -12,8 +12,7 @@ RemainedTicketsInfo* SalesSystem::searchRemainedTickesInfo(Station* startStation
     unsigned int currentSeat = this->line->train->totalSeat;
     for (int i = 0; i < this->ticketHistory.size(); i++) {
         Ticket* tmpTicket = this->ticketHistory[i];
-        //这里比较tricky的地方是，只需要用传入的startStation判断就足够了
-        if (startStationWithIn(startStation, tmpTicket->startStation, tmpTicket->endStation)) {
+        if (startStationWithIn(startStation,endStation, tmpTicket->startStation, tmpTicket->endStation)) {
             currentSeat--;
         }
     }
@@ -120,12 +119,16 @@ Train* SalesSystem::setupTrain() {
     return new Train("Old train", 1234, 10);
 }
 
-bool SalesSystem::startStationWithIn(Station*searchStation, Station* startStation,Station* endStation) {
-    Station* currentStation = startStation;
-    while (currentStation && currentStation->stationID != endStation->stationID) {
-        if (currentStation->stationID == searchStation->stationID) {
-            //如果searchStation在start end中间，则返回true
-            return true;
+bool SalesSystem::startStationWithIn(Station*searchStartStation,Station*searchEndStation, Station* startStation,Station* endStation) {
+    Station* currentStation = searchStartStation;
+    while (currentStation) {
+        if (currentStation->stationID <= endStation->stationID) {
+            if (currentStation->stationID > startStation->stationID) {
+                return true;
+            }
+        }
+        if (currentStation->stationID == searchEndStation->stationID) {
+            break;
         }
         currentStation = currentStation->nextStation;
     }

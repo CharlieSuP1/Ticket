@@ -77,12 +77,13 @@ private:
     /**
      传入的车站是否在起终点范围内
      
-     @parm searchStation 要搜索的车站
+     @param searchStartStation 要搜索的起点车站
+     @param searchEndStation 要搜索的终点车站
      @param startStation 起点车站
      @param endStation 终点车站
      @return 是否在起终点车站范围内
      */
-    bool startStationWithIn(Station*searchStation, Station* startStation,Station* endStation);
+    bool startStationWithIn(Station*searchStartStation,Station*searchEndStation, Station* startStation,Station* endStation);
     
     /**
      从文件中读取购票历史
