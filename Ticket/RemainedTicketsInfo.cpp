@@ -16,9 +16,10 @@ RemainedTicketsInfo::RemainedTicketsInfo (Station* startStation, Station* endSta
     float tempPrice = 0;
     float tempDistance = 0;
     Station* tempStaion = startStation;
-    while (tempStaion->nextStation && tempStaion != endStation) {
+    while (tempStaion->nextStation && tempStaion->stationID != endStation->stationID) {
         tempPrice += tempStaion->priceToNextStation;
         tempDistance += tempStaion->distanceToNextStation;
+        tempStaion = tempStaion->nextStation;
     }
     this->price = tempPrice;
     this->distance = tempDistance;

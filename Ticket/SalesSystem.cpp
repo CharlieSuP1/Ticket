@@ -26,12 +26,13 @@ RemainedTicketsInfo* SalesSystem::searchRemainedTickesInfo(Station* startStation
 Ticket* SalesSystem::buyTicket(Buyer* buyer,Station* startStation,Station* endStation) {
     //首先查询余票
     RemainedTicketsInfo* remainedTicketInfo = this->searchRemainedTickesInfo(startStation, endStation);
+    Ticket* newTicket = NULL;
     if (remainedTicketInfo) {
         //查询余票成功，开始订票
-        Ticket* newTicket = new Ticket(buyer, startStation, endStation);
+        newTicket = new Ticket(buyer, startStation, endStation);
         this->ticketHistory.push_back(newTicket);
     }
-    return NULL;
+    return newTicket;
 }
 
 vector<Ticket*> SalesSystem::searchTickesInfo(Buyer* buyer) {

@@ -23,6 +23,7 @@ void pressEnterToMainPage() {
 }
 
 void inputAndValid(int* startStationIndex,int* endStationIndex) {
+    cout << "Please input index of start station (1 ~ 10):\n";
     cin >> *startStationIndex;
     
     while (*startStationIndex < 1 || *startStationIndex > 10) {
@@ -52,7 +53,6 @@ void inputAndValid(int* startStationIndex,int* endStationIndex) {
 
 void showSearchRemainTicket() {
     cout << "Welcome to remain ticket search system!\n";
-    cout << "Please input index of start station (1 ~ 10):\n";
     
     int startStationIndex;
     int endStationIndex;
