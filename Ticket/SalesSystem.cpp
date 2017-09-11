@@ -121,10 +121,14 @@ Train* SalesSystem::setupTrain() {
 
 bool SalesSystem::startStationWithIn(Station*searchStartStation,Station*searchEndStation, Station* startStation,Station* endStation) {
     Station* currentStation = searchStartStation;
+    vector<int> stationIDs = vector<int>();
     while (currentStation) {
         if (currentStation->stationID <= endStation->stationID) {
-            if (currentStation->stationID > startStation->stationID) {
-                return true;
+            if (currentStation->stationID >= startStation->stationID) {
+                stationIDs.push_back(currentStation->stationID);
+                if (stationIDs.size() == 2) {
+                    return true;
+                }
             }
         }
         if (currentStation->stationID == searchEndStation->stationID) {
